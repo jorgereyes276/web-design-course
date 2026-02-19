@@ -48,7 +48,66 @@
       <td>City Stadium</td>
     </tr>
   </table>
+  <h2> Registration Form </h2>
+  <form action="/submit_registration" method="post">
 
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="John Smith" required><br><br>
+
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" placeholder="john.smith@example.com" required><br><br>
+
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age" min="16" max="80" placeholder="16-80"><br><br>
+
+    <label for="country">Country:</label><br>
+    <select id="country" name="country" required>
+      <option value="">--Please choose a country--</option>
+      <option value="usa">United States</option>
+      <option value="canada">Canada</option>
+      <option value="uk">United Kingdom</option>
+      <option value="australia">Australia</option>
+      <option value="switzerland">Switzerland</option>
+    </select><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
+
+    <label for="confirm_password">Confirm Password:</label><br>
+    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required><br><br>
+
+    <label for="ticket_type">Ticket Type (Choose One):</label><br>
+    <input type="radio" id="standard" name="ticket_type" value="standard" required>
+    <label for="standard">Standard</label><br>
+    <input type="radio" id="premium" name="ticket_type" value="premium" required>
+    <label for="premium">Premium</label><br>
+    <input type="radio" id="vip" name="ticket_type" value="vip" required>
+    <label for="vip">VIP</label><br><br>
+
+    <label for="extra_options">Extra Options (Choose Many):</label><br>
+    <input type="checkbox" id="parking" name="extra_options" value="parking">
+    <label for="parking">Parking</label><br>
+    <input type="checkbox" id="meals" name="extra_options" value="meals">
+    <label for="meals">Meals</label><br>
+    <input type="checkbox" id="merchandise" name="extra_options" value="merchandise">
+    <label for="merchandise">Merchandise</label><br><br>
+
+    <label for="event">Select Event:</label><br>
+    <select id="event" name="event" required>
+      <option value="">--Please choose an event--</option>
+      <option value="5k_marathon">5K Marathon</option>
+      <option value="triathlon">Triathlon</option>
+      <option value="swimming">Swimming</option>
+      <option value="track_and_field">Track and Field</option>
+    </select><br><br>
+
+    <label for="event_date">Event Date:</label><br>
+    <input type="date" id="event_date" name="event_date" required><br><br>
+
+    <label for="event_time">Event Time:</label><br>
+    <input type="time" id="event_time" name="event_time" required><br><br>
+
+    <input type="submit" value="Register">
 </body>
 </html>
 
