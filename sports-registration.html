@@ -6,14 +6,84 @@
   <title>Sports Registration Website</title>       
   
   <style>
-
-  
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #41586d;
+    color: #ced3e4;
+    }  
+    .container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #3b4248;
+    border-radius: 20px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+    }
+    h1{
+    text-align: center;
+    color: #ced3e4;
+    font-weight: 1000;
+    }
+    h2{
+      font-weight: 1000;
+    }
+    p{
+    text-align: center;
+     font-size: 14px;
+    }
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ced3e4;
+    }
+    th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ced3e4;
+    }
+    th {
+    background-color: #41586d;
+    font-weight: 700;
+    }
+    tbody tr:nth-child(odd) {
+    background-color: #41586d;
+    }
+    
+    label {
+    display: text;
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    }
+    input, select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 9px 10px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-size: 14px;
+    outline: none;
+} 
+    .horizontal-group {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    .horizontal-group .group {
+      flex: 1;
+    }
   </style>
 
 </head>
 <body>
+  <div class="container">
   <h1>Sport Event Registration</h1>           
-  <p>Feel Free to Register for Any of the Upcoming Events!</p>
+  <p>Feel Free to Register for Any of the Upcoming Events!</p><br>
 
   <h2> Upcoming Events </h2>
   <table>
@@ -76,21 +146,26 @@
     <label for="confirm_password">Confirm Password:</label><br>
     <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required><br><br>
 
-    <label for="ticket_type">Ticket Type (Choose One):</label><br>
-    <input type="radio" id="standard" name="ticket_type" value="standard" required>
-    <label for="standard">Standard</label><br>
-    <input type="radio" id="premium" name="ticket_type" value="premium" required>
-    <label for="premium">Premium</label><br>
-    <input type="radio" id="vip" name="ticket_type" value="vip" required>
-    <label for="vip">VIP</label><br><br>
-
-    <label for="extra_options">Extra Options (Choose Many):</label><br>
-    <input type="checkbox" id="parking" name="extra_options" value="parking">
-    <label for="parking">Parking</label><br>
-    <input type="checkbox" id="meals" name="extra_options" value="meals">
-    <label for="meals">Meals</label><br>
-    <input type="checkbox" id="merchandise" name="extra_options" value="merchandise">
-    <label for="merchandise">Merchandise</label><br><br>
+    <div class="horizontal-group">
+      <div class="group">
+        <label for="ticket_type">Ticket Type (Choose One):</label><br>
+        <input type="radio" id="standard" name="ticket_type" value="standard" required>
+        <label for="standard">Standard</label><br>
+        <input type="radio" id="premium" name="ticket_type" value="premium" required>
+        <label for="premium">Premium</label><br>
+        <input type="radio" id="vip" name="ticket_type" value="vip" required>
+        <label for="vip">VIP</label>
+      </div>
+      <div class="group">
+        <label for="extra_options">Extra Options (Choose Many):</label><br>
+        <input type="checkbox" id="parking" name="extra_options" value="parking">
+        <label for="parking">Parking</label><br>
+        <input type="checkbox" id="meals" name="extra_options" value="meals">
+        <label for="meals">Meals</label><br>
+        <input type="checkbox" id="merchandise" name="extra_options" value="merchandise">
+        <label for="merchandise">Merchandise</label>
+      </div>
+    </div><br><br>
 
     <label for="event">Select Event:</label><br>
     <select id="event" name="event" required>
@@ -108,6 +183,7 @@
     <input type="time" id="event_time" name="event_time" required><br><br>
 
     <input type="submit" value="Register">
+    </div>
 </body>
 </html>
 
